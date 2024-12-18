@@ -3,25 +3,34 @@
 
 / {
     macros {
-        macro_command_1: macro {
-            label = "Command+1";
-            bindings = <
-                &macro_press &kp LGUI
-                &macro_tap &kp N1
-                &macro_release &kp LGUI
-            >;
+        TOOL1: TOOL1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_tap &kp N1>
+                , <&macro_release &kp LCMD>
+                ;
         };
     };
+
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer { // Layer 0
             display-name = "Base";
+// ----------------------------------------------
+// |     Z     |     M     |     K     |
+// |     A     |     B     |     C     |
             bindings = <
-                &macro_command_1 &kp B &kp C &kp D
-                &kp E &kp F &kp G &kp H
+                &TOOL1    &kp B    &kp C    &kp D 
+                &kp E    &kp F    &kp G    &kp H
             >;
         };
     };
+
+
+
+    
 };
