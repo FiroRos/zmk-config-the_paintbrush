@@ -6,9 +6,7 @@ keymap {
 
         default_layer { // Layer 0
             display-name = "Base";
-// ----------------------------------------------
-// |     Z     |     M     |     K     |
-// |     A     |     B     |     C     |
+            
             bindings = <
                 &kp Z    &kp M    &kp K
                 &kp A    &kp B    &kp C
