@@ -1,0 +1,6 @@
+if SHIELD_PAINTBRUSH
+
+config ZMK_KEYBOARD_NAME
+    default "Paintbrush:
+
+endif
