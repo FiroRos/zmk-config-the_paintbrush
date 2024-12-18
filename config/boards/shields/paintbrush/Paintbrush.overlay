@@ -1,6 +1,7 @@
+
 / {
 	chosen {
-		zmk,kscan = &kscan0;
+		zmk,kscan = &default_kscan;
 	};
 
 	default_kscan: kscan {
