@@ -2,6 +2,10 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    #include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
     macros {
         TOOL1: TOOL1 {
             compatible = "zmk,behavior-macro";
@@ -9,6 +13,76 @@
             bindings
                 = <&macro_press &kp LCMD>
                 , <&macro_tap &kp N1>
+                , <&macro_release &kp LCMD>
+                ;
+        };
+
+        TOOL2: TOOL2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_tap &kp N2>
+                , <&macro_release &kp LCMD>
+                ;
+        };
+
+        TOOL3: TOOL3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_tap &kp N3>
+                , <&macro_release &kp LCMD>
+                ;
+        };
+
+        TOOL4: TOOL4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_tap &kp N4>
+                , <&macro_release &kp LCMD>
+                ;
+        };
+
+        TOOL5: TOOL5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_tap &kp N5>
+                , <&macro_release &kp LCMD>
+                ;
+        };
+
+        TOOL6: TOOL6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_tap &kp N6>
+                , <&macro_release &kp LCMD>
+                ;
+        };
+
+        TOOL7: TOOL7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_tap &kp N7>
+                , <&macro_release &kp LCMD>
+                ;
+        };
+
+        TOOL8: TOOL8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_tap &kp N8>
                 , <&macro_release &kp LCMD>
                 ;
         };
@@ -24,8 +98,8 @@
 // |     Z     |     M     |     K     |
 // |     A     |     B     |     C     |
             bindings = <
-                &TOOL1    &kp B    &kp C    &kp D 
-                &kp E    &kp F    &kp G    &kp H
+                &TOOL8    &TOOL6    &TOOL4    &TOOL2 
+                &TOOL7    &TOOL5    &TOOL3    &TOOL1
             >;
         };
     };
