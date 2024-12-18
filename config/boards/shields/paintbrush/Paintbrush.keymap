@@ -21,8 +21,8 @@
 
     behaviors {
         macro_command_1: macro {
-            label = "Command+1";
-            bindings = <&kp LC(CMD) &kp N1>;
+            label = "Command1";
+            bindings = <&kp LEFT_COMMAND &kp N1>;
         };
     };
 };
