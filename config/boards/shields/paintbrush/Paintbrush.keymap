@@ -2,27 +2,25 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        TOOL1: TOOL1 {
+            compatible = "zmk,keymap";
+            bindings = <&kp LEFT_COMMAND &kp N1>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer { // Layer 0
             display-name = "Base";
-// ----------------------------------------------
-// |     Z     |     M     |     K     |
-// |     A     |     B     |     C     |
+            // ----------------------------------------------
+            // |     Z     |     M     |     K     |
+            // |     A     |     B     |     C     |
             bindings = <
-                &macro_command_1    &kp B    &kp C    &kp D 
+                &TOOL1    &kp B    &kp C    &kp D 
                 &kp E    &kp F    &kp G    &kp H
             >;
-        };
-    };
-
-
-
-    behaviors {
-        macro_command_1: macro {
-            label = "Command1";
-            bindings = <&kp LEFT_COMMAND &kp N1>;
         };
     };
 };
