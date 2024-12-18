@@ -1,4 +1,3 @@
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
@@ -12,9 +11,18 @@
 // |     Z     |     M     |     K     |
 // |     A     |     B     |     C     |
             bindings = <
-                &kp A    &kp B    &kp C    &kp D 
+                &macro_command_1    &kp B    &kp C    &kp D 
                 &kp E    &kp F    &kp G    &kp H
             >;
+        };
+    };
+
+
+
+    behaviors {
+        macro_command_1: macro {
+            label = "Command+1";
+            bindings = <&kp LC(CMD) &kp N1>;
         };
     };
 };
