@@ -96,13 +96,14 @@
 // |     Z     |     M     |     K     |
 // |     A     |     B     |     C     |
             bindings = <
-                &TOOL8    &TOOL6    &TOOL4    &TOOL2 
+                &mo 1    &TOOL6    &TOOL4    &TOOL2 
                 &TOOL7    &TOOL5    &TOOL3    &TOOL1
             >;
         };
+
         bt_layer { //layer 1
             bindings = <
-                &none    &BT BT_SEL 0    &none    &none
+                &none    &bt BT_SEL 0    &none    &none
                 &bt BT_CLR    &none    &none    &none
             >;
         };        
