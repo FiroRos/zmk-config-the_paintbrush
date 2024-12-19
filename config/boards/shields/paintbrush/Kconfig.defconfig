@@ -6,6 +6,9 @@ config ZMK_KEYBOARD_NAME
 config I2C
     default y
 
+config DISPLAY
+    default y
+
 config SSD1306
     default y
 
