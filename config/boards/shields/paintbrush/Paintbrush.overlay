@@ -1,3 +1,18 @@
+&i2c0 {
+    status = "okay";
+    scl-pin = <2>;
+    sda-pin = <3>;
+
+    ssd1309: ssd1309@3c {
+        compatible = "ssd1309";
+        reg = <0x3c>;
+        label = "SSD1309";
+        height = <64>;
+        width = <128>;
+    };
+};
+
+
 / {
 	chosen {
 		zmk,kscan = &default_kscan;
