@@ -1,16 +1,24 @@
-&i2c1 {
-    status = "okay";
-    scl-pin = <2>;  // GPIO pin for SCL
-    sda-pin = <3>;  // GPIO pin for SDA
+&pro_micro_i2c {
+	status = "okay";
 
-    display: oled_display {
-        compatible = "ssd1306";
-        label = "SSD1306";
-        reg = <0x3C>;  // I2C address of the OLED
-        width = <128>;
-        height = <32>;
-    };
+	oled: ssd1306@3c {
+		compatible = "solomon,ssd1306fb";
+		reg = <0x3c>;
+		label = "DISPLAY";
+		width = <128>;
+		height = <32>;
+		segment-offset = <0>;
+		page-offset = <0>;
+		display-offset = <0>;
+		multiplex-ratio = <31>;
+		segment-remap;
+		com-invdir;
+		com-sequential;
+		prechargep = <0x22>;
+		inversion-on;
+	};
 };
+
 
 / {
 	chosen {
