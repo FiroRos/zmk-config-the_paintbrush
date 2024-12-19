@@ -29,7 +29,7 @@
 
         nice_view_i2c: display@3c {  // Renamed label to avoid conflict
             compatible = "ssd1306";
-            reg = <0x3C>;  // I2C address of the nice!view (check your display, usually 0x3C or 0x3D)
+            reg = <0x3D>;  // I2C address of the nice!view (check your display, usually 0x3C or 0x3D)
             label = "NICE_VIEW_I2C";  // Updated label to avoid conflict
             width = <128>;  // Width of the display
             height = <64>;  // Height of the display
