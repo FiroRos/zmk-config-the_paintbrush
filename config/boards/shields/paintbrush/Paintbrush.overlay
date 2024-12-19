@@ -1,7 +1,7 @@
 / {
     chosen {
         zmk,kscan = &default_kscan;
-        zephyr,display = &nice_view;  // Link the display as the default
+        zephyr,display = &nice_view_i2c;  // Updated to reference the new label
     };
 
     default_kscan: kscan {
@@ -25,10 +25,10 @@
         sda-pin = <4>;  // GPIO 4 is SDA on the nice!nano v2
         scl-pin = <5>;  // GPIO 5 is SCL on the nice!nano v2
 
-        nice_view: display@3c {
+        nice_view_i2c: display@3c {  // Renamed label to avoid conflict
             compatible = "ssd1306";
             reg = <0x3C>;  // I2C address of the nice!view (check your display, usually 0x3C or 0x3D)
-            label = "NICE_VIEW";
+            label = "NICE_VIEW_I2C";  // Updated label to avoid conflict
             width = <128>;  // Width of the display
             height = <64>;  // Height of the display
         };
