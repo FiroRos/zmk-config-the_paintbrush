@@ -21,6 +21,8 @@
     };
 
     i2c1 {
+        #address-cells = <1>;  // Correct for I2C
+        #size-cells = <0>;     // Correct for I2C
         status = "okay";
         sda-pin = <4>;  // GPIO 4 is SDA on the nice!nano v2
         scl-pin = <5>;  // GPIO 5 is SCL on the nice!nano v2
