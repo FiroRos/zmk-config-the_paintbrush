@@ -23,7 +23,6 @@
 
 / {
 	chosen {
-		zmk,kscan = &default_kscan;
 		zephyr,display = &oled;
 	};
 
