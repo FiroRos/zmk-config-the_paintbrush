@@ -9,22 +9,24 @@ config I2C
 config SSD1306
     default y
 
-config DISPLAY
-    default y
-
 config ZMK_DISPLAY
+    bool "Enable ZMK Display Support"
     default y
 
 config ZMK_WIDGET_LAYER_STATUS
+    bool "Enable Layer Status Widget"
     default y
 
 config ZMK_WIDGET_BATTERY_STATUS
+    bool "Enable Battery Status Widget"
     default y
 
 config ZMK_WIDGET_LOGO
+    bool "Enable Logo Widget"
     default y
 
 config ZMK_WIDGET_OUTPUT_STATUS
+    bool "Enable Output Status Widget"
     default y
 
 endif
