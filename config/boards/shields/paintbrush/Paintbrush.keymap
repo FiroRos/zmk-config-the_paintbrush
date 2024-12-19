@@ -102,10 +102,10 @@
         };
 
         bt_layer { //layer 1
-        display-name = "BT";
+            display-name = "BT";
             bindings = <
-                &none    &bt_SEL 0    &none    &none
-                &BT_CLR    &none    &none    &none
+                &none    &bt BT_SEL 0    &none    &none
+                &bt BT_CLR    &none    &none    &none
             >;
         };
     };
