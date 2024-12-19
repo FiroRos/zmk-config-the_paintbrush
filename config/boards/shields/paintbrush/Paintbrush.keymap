@@ -7,15 +7,15 @@
 / {
     zmk,display {
         compatible = "zmk,display";
-        widgets = <&output_status_widget &battery_status_widget>;
+        widgets = <&output_status &battery_status>;
     };
 
-    output_status_widget: widget {
+    output_status: output_status_widget {
         compatible = "zmk,widget-output-status";
         label = "Output Status";
     };
 
-    battery_status_widget: widget {
+    battery_status: battery_status_widget {
         compatible = "zmk,widget-battery-status";
         label = "Battery Status";
     };
