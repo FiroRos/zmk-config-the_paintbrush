@@ -1,14 +1,15 @@
 / {
-	chosen {
-		zmk,kscan = &default_kscan;
-	};
+    chosen {
+        zmk,kscan = &default_kscan;
+        zephyr,display = &nice_view;  // Link the display as the default
+    };
 
-	default_kscan: kscan {
-		compatible = "zmk,kscan-gpio-direct";
-		label = "default_kscan";
+    default_kscan: kscan {
+        compatible = "zmk,kscan-gpio-direct";
+        label = "default_kscan";
 
-		input-gpios
-			= <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        input-gpios
+            = <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
@@ -16,6 +17,20 @@
             , <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-			;
-	};
+            ;
+    };
+
+    i2c1 {
+        status = "okay";
+        sda-pin = <4>;  // GPIO 4 is SDA on the nice!nano v2
+        scl-pin = <5>;  // GPIO 5 is SCL on the nice!nano v2
+
+        nice_view: display@3c {
+            compatible = "ssd1306";
+            reg = <0x3C>;  // I2C address of the nice!view (check your display, usually 0x3C or 0x3D)
+            label = "NICE_VIEW";
+            width = <128>;  // Width of the display
+            height = <64>;  // Height of the display
+        };
+    };
 };

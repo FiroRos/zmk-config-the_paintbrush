@@ -5,6 +5,24 @@
 
 
 / {
+    zmk,display {
+        compatible = "zmk,display";
+        widgets = <&output_status &battery_status>;
+    };
+
+    output_status: widget {
+        compatible = "zmk,widget-output-status";
+        label = "Output Status";
+    };
+
+    battery_status: widget {
+        compatible = "zmk,widget-battery-status";
+        label = "Battery Status";
+    };
+
+
+
+    
     macros {
         TOOL1: TOOL1 {
             compatible = "zmk,behavior-macro";
