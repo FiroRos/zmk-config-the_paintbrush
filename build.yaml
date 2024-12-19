@@ -20,4 +20,7 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: Paintbrush
+    shield: some_native_shield
+    shield: some_native_shield nice_view
+
+
