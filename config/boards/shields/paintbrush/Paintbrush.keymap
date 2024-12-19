@@ -6,9 +6,6 @@
 
 / {
 
-
-
-im 
     macros {
         TOOL1: TOOL1 {
             compatible = "zmk,behavior-macro";
