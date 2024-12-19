@@ -1,3 +1,5 @@
+#include "test_widget.h"  // Reference the header file directly
+
 #include <zmk/display/status_screen.h>
 #include <zmk/event_manager.h>
 #include <lvgl.h>
