@@ -1,8 +1,9 @@
 if SHIELD_PAINTBRUSH
 
 config ZMK_KEYMAP_TRANSFORM
+    "Enable ZMK Keymap Transform"
     default y
-    
+
 config ZMK_KEYBOARD_NAME
 	default "The Paintbrush"
 
