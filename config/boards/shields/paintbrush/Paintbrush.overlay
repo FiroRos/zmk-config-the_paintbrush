@@ -1,3 +1,15 @@
+&i2c1 {
+    status = "okay";
+
+    display: oled_display {
+        compatible = "ssd1306";
+        label = "SSD1306";
+        reg = <0x3C>;  // Replace with your detected IIC address
+        width = <128>;
+        height = <32>;
+    };
+};
+
 / {
 	chosen {
 		zmk,kscan = &default_kscan;
