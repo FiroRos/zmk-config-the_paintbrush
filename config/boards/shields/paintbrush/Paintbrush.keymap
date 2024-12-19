@@ -105,7 +105,7 @@
         bt_layer { //layer 1
             bindings = <
                 &none    &bt BT_SEL 0    &none    &none
-                &bt BT_CLR_ALL    &out OUT_TOG    &none    &none
+                &bt BT_CLR_ALL    &out OUT_BLE    &none    &none
             >;
         };        
     };
