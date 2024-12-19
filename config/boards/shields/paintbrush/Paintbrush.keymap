@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include "test_widget.h"
 
 
 / {
@@ -114,8 +113,4 @@ im
             >;
         };        
     };
-};
-
-ZMK_DISPLAY_WIDGETS = {
-    test_widget,
 };
