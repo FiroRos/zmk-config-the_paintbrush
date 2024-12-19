@@ -5,8 +5,8 @@
 &i2c1 {
     compatible = "nordic,nrf-twim";
     status = "okay";
-    scl-pin = <31>;  // Adjust based on your wiring
-    sda-pin = <30>;  // Adjust based on your wiring
+    scl-pin = <2>;  // Adjust based on your wiring
+    sda-pin = <3>;  // Adjust based on your wiring
     clock-frequency = <I2C_BITRATE_FAST>;
 
     ssd1306: ssd1306@3c {
