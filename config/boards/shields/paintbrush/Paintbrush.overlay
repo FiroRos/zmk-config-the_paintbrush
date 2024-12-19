@@ -1,8 +1,31 @@
+
+&pro_micro_i2c {
+	status = "okay";
+
+	oled: ssd1306@3c {
+		compatible = "solomon,ssd1306fb";
+		reg = <0x3c>;
+		label = "DISPLAY";
+		width = <128>;
+		height = <32>;
+		segment-offset = <0>;
+		page-offset = <0>;
+		display-offset = <0>;
+		multiplex-ratio = <31>;
+		segment-remap;
+		com-invdir;
+		com-sequential;
+		prechargep = <0x22>;
+		inversion-on;
+	};
+};
+
+
 / {
-    chosen {
-        zmk,kscan = &default_kscan;
-        zephyr,display = &nice_view_i2c;  // Link the display as the default
-    };
+	chosen {
+		zmk,kscan = &kscan0;
+		zephyr,display = &oled;
+	};
 
     default_kscan: kscan {
         compatible = "zmk,kscan-gpio-direct";
@@ -17,36 +40,5 @@
             <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
             <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
             <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-    };
-
-    i2c1 {
-        #address-cells = <1>;  // Correct for I2C
-        #size-cells = <0>;     // Correct for I2C
-        status = "okay";
-        sda-pin = <4>;         // GPIO 4 is SDA on the nice!nano v2
-        scl-pin = <5>;         // GPIO 5 is SCL on the nice!nano v2
-
-        nice_view_i2c: display@3c { 
-            compatible = "ssd1306";
-            reg = <0x3D>;       // I2C address of the nice!view (check your display, usually 0x3C or 0x3D)
-            label = "NICE_VIEW_I2C";
-            width = <128>;      // Width of the display
-            height = <64>;      // Height of the display
-        };
-    };
-
-    zmk,display {
-        compatible = "zmk,display";
-        widgets = <&output_status &battery_status>;
-    };
-
-    output_status: output_status_widget {
-        compatible = "zmk,widget-output-status";
-        label = "Output Status";
-    };
-
-    battery_status: battery_status_widget {
-        compatible = "zmk,widget-battery-status";
-        label = "Battery Status";
     };
 };
