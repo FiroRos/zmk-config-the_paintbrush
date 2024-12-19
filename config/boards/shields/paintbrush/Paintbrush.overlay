@@ -1,10 +1,12 @@
 &i2c1 {
     status = "okay";
+    scl-pin = <2>;  // GPIO pin for SCL
+    sda-pin = <3>;  // GPIO pin for SDA
 
     display: oled_display {
         compatible = "ssd1306";
         label = "SSD1306";
-        reg = <0x3C>;  // Replace with your detected IIC address
+        reg = <0x3C>;  // I2C address of the OLED
         width = <128>;
         height = <32>;
     };
