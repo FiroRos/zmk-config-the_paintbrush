@@ -4,12 +4,27 @@ config ZMK_KEYBOARD_NAME
 	default "The Paintbrush"
 
 config I2C
-	default y
+    default y
 
 config SSD1306
-	default y
+    default y
 
 config DISPLAY
+    default y
+
+config ZMK_DISPLAY
+    default y
+
+config ZMK_WIDGET_LAYER_STATUS
+    default y
+
+config ZMK_WIDGET_BATTERY_STATUS
+    default y
+
+config ZMK_WIDGET_LOGO
+    default y
+
+config ZMK_WIDGET_OUTPUT_STATUS
     default y
 
 endif
