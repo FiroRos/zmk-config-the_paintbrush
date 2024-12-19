@@ -9,6 +9,8 @@ config I2C
 config SSD1306
 	default y
 
+config DISPLAY
+    default y
 
 endif
 
