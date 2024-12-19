@@ -3,11 +3,5 @@ if SHIELD_PAINTBRUSH
 config ZMK_KEYBOARD_NAME
 	default "The Paintbrush"
 
-config I2C
-	default y
-
-config SSD1306
-	default y
-
 endif
 
