@@ -86,7 +86,31 @@
                 , <&macro_release &kp LCMD>
                 ;
         };
+
+        UNDO: UNDO {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_tap &kp Z>
+                , <&macro_release &kp LCMD>
+                ;
+        };
+
+        REDO: REDO {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp UP>
+                , <&macro_tap &kp LCMD>
+                , <&macro_tap &kp Z>
+                , <&macro_release &kp UP>
+                ;
+        };
     };
+
+
+    
 
 
     keymap {
@@ -104,8 +128,8 @@
 
         bt_layer { //layer 1
             bindings = <
-                &none    &bt BT_SEL 0    &none    &none
-                &bt BT_CLR_ALL    &out OUT_TOG    &none    &none
+                &none    &bt BT_SEL 0    &none    &REDO
+                &bt BT_CLR_ALL    &out OUT_TOG    &none    &UNDO
             >;
         };        
     };
