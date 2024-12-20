@@ -1,7 +1,6 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/keys.h>
 
 
 / {
@@ -85,51 +84,28 @@
                 , <&macro_release &kp LCMD>
                 ;
         };
-
-        UNDO1: UNDO1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCMD>
-                , <&macro_tap &kp Z>
-                , <&macro_release &kp LCMD>
-                ;
-        };
-
-        REDO1: REDO1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp UP>
-                , <&macro_tap &kp LCMD>
-                , <&macro_tap &kp Z>
-                , <&macro_release &kp UP>
-                ;
-        };
     };
-
-
-    
 
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer { // Layer 0
+        default_layer { //layer 0
+            display-name = "Base";
 // ----------------------------------------------
-// |     Z     |     M     |     K     |
-// |     A     |     B     |     C     |
+// |     A     |     B     |     C     |     D     |
+// |     E     |     F     |     G     |     H     |
             bindings = <
-                &ht mo 1 TOOL8   &TOOL6    &TOOL4    &TOOL2 
+                &lt 1 TOOL8    &TOOL6    &TOOL4    &TOOL2 
                 &TOOL7    &TOOL5    &TOOL3    &TOOL1
             >;
         };
 
         bt_layer { //layer 1
             bindings = <
-                &none    &bt BT_SEL 0    &none    &REDO1
-                &bt BT_CLR_ALL    &out OUT_TOG    &none    &UNDO1
+                &none    &BT BT_SEL 0    &none    &none
+                &bt BT_CLR    &none    &none    &none
             >;
-        };        
+        };
     };
-};
+ };
