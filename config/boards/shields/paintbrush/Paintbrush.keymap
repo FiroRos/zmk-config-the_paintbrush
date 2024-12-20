@@ -93,7 +93,7 @@
         compatible = "zmk,keymap";
 
         default_layer { // Layer 0
-            display-name = "Base";
+            label = "Base";
 // ----------------------------------------------
 // |     Z     |     M     |     K     |
 // |     A     |     B     |     C     |
@@ -104,6 +104,7 @@
         };
 
         bt_layer { //layer 1
+        label = "BT";
             bindings = <
                 &none    &bt BT_SEL 0    &none    &none
                 &bt BT_CLR_ALL    &out OUT_TOG    &none    &none
