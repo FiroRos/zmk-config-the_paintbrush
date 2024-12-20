@@ -100,9 +100,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LCMD>
-                , <&macro_tap &kp UP_ARROW &kp Z>
-                , <&macro_release &kp LCMD>
+                = <&macro_tap &kp LCMD &kp UP_ARROW &kp Z>
                 ;
         };
     };
