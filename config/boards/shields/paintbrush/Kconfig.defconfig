@@ -3,7 +3,6 @@ if SHIELD_PAINTBRUSH
 config ZMK_KEYBOARD_NAME
 	default "The Paintbrush"
 
-if ZMK_DISPLAY
 
 config ZMK_DISPLAY
     select LV_USE_CONT
@@ -22,7 +21,6 @@ config SSD1306_REVERSE_MODE
     bool
 	default n
 
-endif # ZMK_DISPLAY
 
 if LVGL
 
