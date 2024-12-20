@@ -86,7 +86,7 @@
                 ;
         };
 
-        UNDO: UNDO {
+        UNDO1: UNDO1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -96,7 +96,7 @@
                 ;
         };
 
-        REDO: REDO {
+        REDO1: REDO1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -127,8 +127,8 @@
 
         bt_layer { //layer 1
             bindings = <
-                &none    &bt BT_SEL 0    &none    &REDO
-                &bt BT_CLR_ALL    &out OUT_TOG    &none    &UNDO
+                &none    &bt BT_SEL 0    &none    &REDO1
+                &bt BT_CLR_ALL    &out OUT_TOG    &none    &UNDO1
             >;
         };        
     };
