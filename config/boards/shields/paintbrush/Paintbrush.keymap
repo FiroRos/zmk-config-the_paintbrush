@@ -97,7 +97,7 @@
 // |     Z     |     M     |     K     |
 // |     A     |     B     |     C     |
             bindings = <
-                &mo 1    &TOOL6    &TOOL4    &TOOL2 
+                &mo 1 TOOL8    &TOOL6    &TOOL4    &TOOL2 
                 &TOOL7    &TOOL5    &TOOL3    &TOOL1
             >;
         };
