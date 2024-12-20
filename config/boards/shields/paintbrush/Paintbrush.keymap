@@ -96,15 +96,14 @@
                 ;
         };
 
-        REDO1: REDO1 {
+        REDO1: REDO1 { //not working for some reason
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp UP_ARROW>
+                = <&macro_tap &kp UP_ARROW>
                 , <&macro_press &kp LCMD>
                 , <&macro_tap &kp Z>
                 , <&macro_release &kp LCMD>
-                , <&macro_release &kp UP_ARROW>
                 ;
         };
     };
