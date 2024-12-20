@@ -104,7 +104,7 @@
                 , <&macro_press &kp LCMD>
                 , <&macro_tap &kp Z>
                 , <&macro_release &kp LCMD>
-                , <&macro_release &kp UP>
+                , <&macro_release &kp UP_ARROW>
                 ;
         };
     };
