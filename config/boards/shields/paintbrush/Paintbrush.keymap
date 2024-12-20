@@ -101,8 +101,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCMD>
-                , <&macro_tap &kp UP_ARROW>
-                , <&macro_tap &kp Z>
+                , <&macro_tap &kp UP_ARROW &KP Z>
                 , <&macro_release &kp LCMD>
                 ;
         };
